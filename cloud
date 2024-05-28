@@ -26,6 +26,27 @@ yum update -y
    13  docker push public.ecr.aws/k6g3h1i8/myrepo:latest
    14  history
 
+exp 9 
+sudo su -
+yum update
+yum install docker
+service docker start
+docker pull httpd
+docker run -d -p 80:80 httpd
+
+Copy the instance ipv4 address to verify the "It works " page 
+
+
+docker exec -it <httpd-address> bash
+ls
+cd htdocs
+ls
+cat > index.html
+Type you content and press enter and then press CTRL + D to exit .. 
+
+then copy the public ipv4 address and check it
+
+
 
 exp 9 cmd
 sudo su -
